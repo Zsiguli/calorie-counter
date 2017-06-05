@@ -28,10 +28,10 @@
         <td>functions</td>
     </tr>
     <tr th:each="meal : ${meals}">
-        <td th:text="${meal}"/>
-        <td>dinner</td>
-        <td>eggs</td>
-        <td>234</td>
+        <td th:text="${meal.date}"/>
+        <td th:text="${meal.type}"/>
+        <td th:text="${meal.description}"/>
+        <td th:text="${meal.calories}"/>
         <td>functions</td>
     </tr>
 </table>
