@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <title>Calorie Counter</title>
@@ -27,8 +27,8 @@
         <td>calories</td>
         <td>functions</td>
     </tr>
-    <tr>
-        <td>234</td>
+    <tr th:each="meal : ${meals}">
+        <td th:text="${meal}"/>
         <td>dinner</td>
         <td>eggs</td>
         <td>234</td>
