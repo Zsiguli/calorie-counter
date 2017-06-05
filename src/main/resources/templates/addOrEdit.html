@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8"/>
     <title>Add or Edit</title>
@@ -8,13 +8,17 @@
 <h1>Add Or Edit</h1>
 <form>
     <label>Date:</label>
-    <input type="text" required="required"/>
+    <input type="date" required="required"/>
     <label>Type:</label>
-    <input type="text" required="required"/>
+    <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
     <label>Description:</label>
     <input type="text"/>
     <label>Calories:</label>
-    <input type="text" required="required"/>
+    <input type="number" required="required"/>
     <button type="submit">Save</button>
     <button type="submit">Cancel</button>
 </form>
