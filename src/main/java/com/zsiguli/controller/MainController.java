@@ -10,4 +10,9 @@ public class MainController {
   public String homePage() {
     return "index";
   }
+
+  @GetMapping("/addOrEdit")
+  public String addOrEditPage() {
+    return "addOrEdit";
+  }
 }
