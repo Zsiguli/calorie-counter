@@ -6,17 +6,17 @@
 </head>
 <body>
 <h1>Add Or Edit</h1>
-<form>
+<form th:action="@{/meal}" th:object="${meal}" method="post">
     <label>Date:</label>
-    <input type="date" required="required"/>
+    <input th:field="*{date}" type="date" required="required"/>
     <label>Type:</label>
-    <select>
-        <option th:each="type : ${types}" th:text="${type}"></option>
+    <select th:field="*{type}">
+        <option th:each="type : ${types}" th:value="${type}" th:text="${type}"></option>
     </select>
     <label>Description:</label>
-    <input type="text"/>
+    <input th:field="*{description}" type="text"/>
     <label>Calories:</label>
-    <input type="number" required="required"/>
+    <input th:field="*{calories}" type="number" required="required"/>
     <button type="submit">Save</button>
     <button type="submit">Cancel</button>
 </form>

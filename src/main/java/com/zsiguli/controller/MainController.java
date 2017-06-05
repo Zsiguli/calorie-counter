@@ -1,5 +1,6 @@
 package com.zsiguli.controller;
 
+import com.zsiguli.model.Meal;
 import com.zsiguli.model.TypeOfMeal;
 import com.zsiguli.repository.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class MainController {
 
   @GetMapping("/addOrEdit")
   public String addOrEditPage(Model model) {
+    model.addAttribute("meal", new Meal());
     model.addAttribute("types", TypeOfMeal.values());
     return "addOrEdit";
   }
